@@ -1,0 +1,14 @@
+server:
+  port: 8762 #  Will start the gateway server on port 8762
+  
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+    routes:
+      sample-service: # Service to create as sample
+        path: /insurancecompany/** # path that will be intercepted
+        url: insurancecompany-service #which url the request will be mapped to
+        stripPrefix: false  # if zuul should replace the "/insurancecompany/" segment
+        sensitiveHeaders:
