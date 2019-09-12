@@ -2,7 +2,7 @@ server:
   port: 8762 #  Will start the gateway server on port 8762
   
 zuul:
-  ignoredServices: '*'
+  ignoredServices: '*' # Ignore all requests except those explicitly indicated in the 'routes' section.
   host:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
