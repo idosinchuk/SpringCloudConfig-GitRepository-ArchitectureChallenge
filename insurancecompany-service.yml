@@ -22,9 +22,9 @@ spring:
     
     
 # Enable all the endpoints.
-management.endpoints.webexposure.include:*
+# management.endpoints.webexposure.include:*
 
 spring.security.admin.name: admin
 spring.security.admin.password: admin
 # The SQL dialect makes Hibernate generate better SQL for the chosen database
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+# spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
