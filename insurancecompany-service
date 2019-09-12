@@ -1,0 +1,38 @@
+# Will start the insurancecompany server on port 8400
+# URL to open is: http://localhost:8400/
+server: 
+  port:  8400
+
+# Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/insuranceCompanyDB?useSSL:false&useUnicode:true&useJDBCCompliantTimezoneShift:true&useLegacyDatetimeCode:false&serverTimezone:UTC
+    username: root # Database user
+    password: admin # Database password
+    	
+management:
+	endpoints: 
+		webexposure:
+		include: * # Enable all the endpoints.
+
+# user authenticate
+spring:
+	security:
+		user:	
+			name : user
+			password : user
+
+# admin
+		useradmin:
+			name : admin
+			password : admin
+
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+spring:
+	jpa:
+		properties: 
+			hibernate: dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+		hibernate: naming: physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+		database-platform: org.hibernate.dialect.MySQL57Dialect
+		show-sql: true # Show sql output on console
+		
