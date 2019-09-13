@@ -8,7 +8,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/insuranceCompanyDB?useSSL:false&useUnicode:true&useJDBCCompliantTimezoneShift:true&useLegacyDatetimeCode:false&serverTimezone:UTC
     username: root # Database user
-    password: root # Database password
+    password: idosinchukpass10 # Database password
   security:
     user: # user authenticate
       name: user
