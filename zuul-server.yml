@@ -6,7 +6,12 @@ server:
 # It just take all request to the path echo/ and fordward to the server localhost:8091
 zuul:
  ignoredServices: '*'
-  routes:
-    echo-service:
-      path: /insurancecompany/**
-      url: insurancecompany-service #which url the request will be mapped to
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+    routes:
+      insurancecompany-service:
+        path: /insurancecompany/**
+        url: insurancecompany-service #which url the request will be mapped to
+        stripPrefix: false  #if zuul should replace the "/sample/" segment
+        sensitiveHeaders:
