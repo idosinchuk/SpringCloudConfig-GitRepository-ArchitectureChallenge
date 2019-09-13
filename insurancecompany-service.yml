@@ -9,22 +9,10 @@ spring:
     url: jdbc:mysql://localhost:3306/insuranceCompanyDB?useSSL:false&useUnicode:true&useJDBCCompliantTimezoneShift:true&useLegacyDatetimeCode:false&serverTimezone:UTC
     username: root # Database user
     password: idosinchukpass10 # Database password
-  security:
-    user: # user authenticate
-      name: user
-      password: user
   jpa: 
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     database-platform: org.hibernate.dialect.MySQL57Dialect
     show-sql: true # Show sql output on console
-    
-    
-# Enable all the endpoints.
-# management.endpoints.webexposure.include:*
-
-spring.security.admin.name: admin
-spring.security.admin.password: admin
-# The SQL dialect makes Hibernate generate better SQL for the chosen database
-# spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+   
